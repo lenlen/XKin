@@ -9,21 +9,21 @@ set( LIBRARY_PATHS "/usr /usr/local /opt/local /sw" )
 find_path( FREENECT_INCLUDE_DIR
         NAMES libfreenect_sync.h
 	${LIBRARY_PATHS}
-	PATH_SUFFIEXS include include/libfreenect 
+	PATH_SUFFIXES include include/libfreenect 
 	DOC "The dicrectory where libfreenect_sync.h resides"
 )
 
 find_library( FREENECT_SYNC_LIBRARIES 
 	NAMES freenect_sync
 	${LIBRARY_PATHS}
-	PATH_SUFFIES lib lib64
+	PATH_SUFFIXES lib lib64
 	DOC "The freenect_sync library"
 )
 
 find_library( FREENECT_CV_LIBRARIES
 	NAMES freenect_cv
 	${LIBRARY_PATHS}
-	PATH_SUFFIEXS lib lib64
+	PATH_SUFFIXES lib lib64
 	DOC "The freenect_cv library"
 )
 
